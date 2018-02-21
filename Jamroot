@@ -1,0 +1,22 @@
+
+
+import testing ;
+
+project amt2018 ;
+
+alias amt2018 : : : :
+   <toolset>gcc:<cxxflags>-std=c++17
+   <toolset>gcc:<cxxflags>-Wno-deprecated-declarations
+   <toolset>clang:<cxxflags>-stdlib=libc++
+   <toolset>clang:<linkflags>-stdlib=libc++
+   <toolset>clang:<cxxflags>-std=c++17
+   <toolset>clang:<cxxflags>-Wno-unused-local-typedef
+   <toolset>clang:<cxxflags>-Wno-deprecated-declarations
+   <include>include
+ ;
+
+alias tests :
+ [ testing.run tests/test1.cpp amt2018 /boost//system ]
+# [ testing.run tests/create_connection.cpp amt2018 /boost//system ]
+ ;
+explicit tests ;
