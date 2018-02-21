@@ -73,7 +73,8 @@ auto_ativacao = 3403,
 ativacao_via_computador_ou_telefone = 3407,
 ativacao_por_uma_tecla = 3408,
 desacionamento_de_pgm = 3422,
-ativacao_parcial = 3456
+ativacao_parcial = 3456,
+keep_alive = -2
 
 };
 
@@ -211,6 +212,8 @@ const char* message_event(event e)
     return "Desacionamento de PGM";
   case 3456:
     return "Ativação parcial";
+  case -2:
+    return "Keep-Alive";
   default:
     return "Unknown";
   }

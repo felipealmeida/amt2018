@@ -115,6 +115,7 @@ struct communication
         if(buffer.size() == 1 && (unsigned char)buffer[0] == 0xf7)
         {
           send_ack();
+          event(amt2018::event::keep_alive, 0, 0, 0);
         }
         if((unsigned char)buffer[0] == 0x94)
         {
